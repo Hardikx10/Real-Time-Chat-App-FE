@@ -174,7 +174,7 @@ const ChatRoom = () => {
     if (!isAuthorized || !socket) {
         return (
             <div >
-                You are not authorized to access this room
+                Loading...
                 <div />
             </div>
         );
