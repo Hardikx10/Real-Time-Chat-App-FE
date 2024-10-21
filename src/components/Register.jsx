@@ -26,7 +26,7 @@ export default function Register() {
             window.location.href = '/rooms';
         } catch (error) {
             console.error("Registration failed:", error);
-            // You might want to show an error message to the user here
+            
         }
     };
 

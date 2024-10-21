@@ -25,7 +25,7 @@ export default function Login() {
             window.location.href = '/rooms';
         } catch (error) {
             console.error("Login failed:", error);
-            // You might want to show an error message to the user here
+            
         }
     };
 

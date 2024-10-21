@@ -36,12 +36,12 @@ export default function Rooms() {
                     Authorization: `${localStorage.getItem('token')}`
                 }
             });
-            // Ensure rooms is always an array
+            
             setRooms(Array.isArray(response.data.rooms) ? response.data.rooms : []);
         } catch (err) {
             console.error("Error fetching rooms:", err);
             setError("Failed to fetch rooms");
-            setRooms([]); // Set empty array on error
+            setRooms([]); 
         } finally {
             setLoading(false);
         }
@@ -115,7 +115,7 @@ export default function Rooms() {
 
             if (response.data) {
                 const newRoom = response.data[0];
-                // Emit a socket event to notify all clients about the new room
+                
                 socket.emit('createRoom', newRoom);
                 setRoomName('');
                 setError('');
@@ -133,7 +133,7 @@ export default function Rooms() {
     if (loading) {
         return (
             <div>
-                <div></div>
+                <div>Loading...</div>
             </div>
         );
     }
